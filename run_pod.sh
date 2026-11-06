@@ -5,7 +5,7 @@ exec > >(tee -a /workspace/run.log) 2>&1
 
 cd /workspace
 pip install -q --upgrade pip
-pip install -q unsloth trl datasets transformers accelerate sentencepiece protobuf
+pip install -q unsloth trl datasets transformers accelerate sentencepiece protobuf "huggingface_hub[cli]"
 echo "=== deps done"
 
 hf download YukiKaze1337/cn-sqlite-sft --repo-type dataset --local-dir /workspace/data
